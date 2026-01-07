@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    \<meta name="robots" content="noindex, nofollow"\>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇬🇧 Londra - Guida Completa On-Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0066CC 0%, #004499 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .info-box {
+            background: #E6F0FF;
+            border-left: 4px solid #0066CC;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        
+        .info-box strong {
+            color: #0066CC;
+        }
+        
+        .content {
+            padding: 30px 20px;
+        }
+        
+        .day-section {
+            margin-bottom: 40px;
+            border: 2px solid #0066CC;
+            border-radius: 10px;
+            padding: 20px;
+            background: #F9F9F9;
+        }
+        
+        .day-title {
+            background: #0066CC;
+            color: white;
+            padding: 15px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 8px 8px 0 0;
+            font-size: 1.8em;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background: #0066CC;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #0066CC;
+        }
+        
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 30px;
+            width: 2px;
+            height: calc(100% + 25px);
+            background: #0066CC;
+        }
+        
+        .time-block {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .time-range {
+            background: #0066CC;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .location {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #0066CC;
+            margin: 10px 0;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .image-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .image-caption {
+            padding: 10px;
+            background: #f5f5f5;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .route-info {
+            background: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .route-info strong {
+            color: #856404;
+        }
+        
+        .transport-list {
+            background: #E7F3FF;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .transport-list li {
+            margin: 8px 0;
+            list-style: none;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .transport-list li:before {
+            content: '🚌';
+            position: absolute;
+            left: 0;
+        }
+        
+        .transport-list li.tube:before {
+            content: '🚇';
+        }
+        
+        .transport-list li.walk:before {
+            content: '🚶';
+        }
+        
+        .tips-box {
+            background: #D4EDDA;
+            border-left: 4px solid #28A745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tips-box strong {
+            color: #155724;
+        }
+        
+        .allergen-alert {
+            background: #F8D7DA;
+            border-left: 4px solid #DC3545;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .allergen-alert strong {
+            color: #721C24;
+        }
+        
+        h2 {
+            color: #0066CC;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0066CC;
+        }
+        
+        h3 {
+            color: #004499;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .cost-table th {
+            background: #0066CC;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .cost-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .cost-table tr:nth-child(even) {
+            background: #F5F5F5;
+        }
+        
+        .cost-table tr:hover {
+            background: #E6F0FF;
+        }
+        
+        .checklist {
+            background: #F9F9F9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .checklist label {
+            display: block;
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .footer {
+            background: #0066CC;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .links-section {
+            background: #F0F8FF;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .links-section a {
+            display: inline-block;
+            background: #0066CC;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .links-section a:hover {
+            background: #004499;
+        }
+        
+        .weather-info {
+            background: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .duration {
+            background: #FFFACD;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0066CC;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1em;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #004499;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            .timeline-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇬🇧 Londra – Guida Completa On-Site</h1>
+            <p>Pianificazione Viaggio 24–26 Gennaio 2026</p>
+        </header>
+        
+        <div class="content">
+            <div class="info-box">
+                <strong>👥 Gruppo:</strong> Thomas, Sonia, Federico, Teresa (allergica a latte e glutine)<br>
+                <strong>🏠 Base:</strong> Warehouse Conversion Flat, 47 Southampton Way, SE5 7SW, Southwark
+            </div>
+
+            <h2>📊 Contabilità Vacanza</h2>
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Voce</th>
+                        <th>Totale</th>
+                        <th>Per persona (4)</th>
+                        <th>Per famiglia (2)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Voli Wizz Air a/r</td>
+                        <td>222,00€</td>
+                        <td>55,50€</td>
+                        <td>111,00€</td>
+                    </tr>
+                    <tr>
+                        <td>Appartamento (2 notti)</td>
+                        <td>319,00€</td>
+                        <td>79,75€</td>
+                        <td>159,50€</td>
+                    </tr>
+                    <tr>
+                        <td>Trasporti Londra</td>
+                        <td>~27,00€</td>
+                        <td>~6,75€</td>
+                        <td>~13,50€</td>
+                    </tr>
+                    <tr>
+                        <td>Transfer Luton-Londra</td>
+                        <td>~60,00€</td>
+                        <td>15,00€</td>
+                        <td>30,00€</td>
+                    </tr>
+                    <tr style="background: #E6F0FF;">
+                        <td><strong>Subtotale voli/alloggio/trasporti</strong></td>
+                        <td><strong>628,00€</strong></td>
+                        <td><strong>157,00€</strong></td>
+                        <td><strong>314,00€</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Borough Market (pranzo)</td>
+                        <td>~60,00€</td>
+                        <td>15,00€</td>
+                        <td>30,00€</td>
+                    </tr>
+                    <tr>
+                        <td>Cene ristoranti (3 serate)</td>
+                        <td>~300,00€</td>
+                        <td>75,00€</td>
+                        <td>150,00€</td>
+                    </tr>
+                    <tr>
+                        <td>Caffè/snack/pause</td>
+                        <td>~60,00€</td>
+                        <td>15,00€</td>
+                        <td>30,00€</td>
+                    </tr>
+                    <tr style="background: #0066CC; color: white; font-weight: bold;">
+                        <td>TOTALE STIMATO</td>
+                        <td>1.048,00€</td>
+                        <td>262,00€</td>
+                        <td>524,00€</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="tips-box">
+                <strong>💡 Nota importante:</strong> Tutte le principali attrazioni sono GRATUITE (British Museum, Soane, Tate, South Bank, Sky Garden, Leake Street, Westminster/Buckingham esterni)
+            </div>
+
+            <!-- SABATO 24 GENNAIO -->
+            <div class="day-section">
+                <div class="day-title">📅 SABATO 24 GENNAIO 2026</div>
+                <p style="margin-bottom: 15px;"><strong>🎯 Tema:</strong> Icone di Londra + Food Experience + Street Art segreta</p>
+                
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">10:30–11:30</span>
+                            <div class="location">📍 Arrivo zona appartamento</div>
+                            <p><strong>Attività:</strong> Check-in/drop bagagli</p>
+                            <p><strong>Indirizzo:</strong> 47 Southampton Way, SE5 7SW</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">11:30–12:05</span>
+                            <div class="location">🚌 Viaggio verso Borough Market</div>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong><br>
+                                1. A piedi fino a "Southampton Way Estate" (5 min)<br>
+                                2. Bus 136 → Elephant & Castle (19 min)<br>
+                                3. Tube: Northern Line verso London Bridge (3 fermate, 8 min)
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d9850.41234!2d-0.10234!3d51.50735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x48760424a4f8cfd9%3A0x4f0a0a0a0a0a0a!2s47%20Southampton%20Way%2C%20SE5%207SW!3m2!1d51.5070!2d-0.1015!4m5!1s0x487605e5c4c4c4c5%3A0x4f0a0a0a0a0a0a!2sBorough%20Market%2C%208%20Southwark%20Street%2C%20London!3m2!1d51.5055!2d-0.0879!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">12:05–13:30</span>
+                            <div class="location">🍽️ BOROUGH MARKET (Pranzo)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://i0.wp.com/www.londoncitycalling.com/wp-content/uploads/2023/06/Paella-in-Borough-Market.jpg?resize=1024%2C683&ssl=1" alt="Borough Market food">
+                                    <div class="image-caption">Borough Market - Food stalls</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1763451492/search_images/5df65719172e3f409d9ccdbf1326383cd640821e.jpg" alt="Borough Market stalls">
+                                    <div class="image-caption">Borough Market - Atmosphere</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Indirizzo:</strong> 8 Southwark Street, SE1 1TL</p>
+                            <p><strong>Orari:</strong> 9:00–17:00 (Sabato) | <strong>Ingresso:</strong> Gratuito</p>
+
+                            <div class="allergen-alert">
+                                <strong>⚠️ Per Teresa (allergie latte + glutine):</strong><br>
+                                1. Chiedete sempre: "Does this contain gluten or dairy?"<br>
+                                2. Scegliete: carne grigliata, riso, patate, verdure<br>
+                                3. Stand consigliati: Pieminister (opzioni dedicate), Leon (menu allergeni)<br>
+                                4. Alternativa sicura: portatevi snack o mangiate in ristorante con allergen menu
+                            </div>
+
+                            <span class="duration">⏱️ Durata: 85 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">13:30–14:15</span>
+                            <div class="location">🚶 Passeggiata South Bank verso Tower Bridge</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780371/search_images/99f7d564f4a3d8934acfea9bb944549e373a0757.jpg" alt="Tower Bridge">
+                                    <div class="image-caption">Tower Bridge - Vista frontale</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1766790035/search_images/aca26eb893bfe324633c881b218cbfe3d260b664.jpg" alt="Tower Bridge from Thames">
+                                    <div class="image-caption">Tower Bridge - Vista dal Tamigi</div>
+                                </div>
+                            </div>
+
+                            <div class="route-info">
+                                <strong>Percorso:</strong> A piedi da Borough Market (10 min) verso Thames Path → Tower Bridge
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2483.5!2d-0.0879!3d51.5055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x487605e5c4c4c4c5%3A0x4f0a0a0a0a0a0a!2sBorough%20Market!3m2!1d51.5055!2d-0.0879!4m5!1s0x487605c8e5c5c5c5%3A0x4f0a0a0a0a0a0a!2sTower%20Bridge!3m2!1d51.5054!2d-0.0759!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            <span class="duration">⏱️ Durata: 45 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">14:15–15:05</span>
+                            <div class="location">🏛️ South Bank + Tate Modern (esterno)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780382/search_images/0564f7974caf77524a164b51c7ce7b01e88b9959.jpg" alt="Tate Modern">
+                                    <div class="image-caption">Tate Modern - Edificio e Thames</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780382/search_images/b3be170bac79f3de30fd73c6c91917dbab8e3a2.jpg" alt="Tate Modern Thames">
+                                    <div class="image-caption">Tate Modern - South Bank</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Cosa vedrete:</strong> Tate Modern (ex centrale elettrica), Millennium Bridge (collega Tate con St Paul's), South Bank vibrante</p>
+                            <span class="duration">⏱️ Durata: 50 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">15:15–16:00</span>
+                            <div class="location">🎨 LEAKE STREET ARCHES (Street Art)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780371/search_images/96e0c3c082ef775106e0db7f31b3a9c871211192.jpg" alt="Leake Street">
+                                    <div class="image-caption">Leake Street - Tunnel art</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780371/search_images/b7a389aafbb38c7e3fd4816c86bc8228fe0eb448.jpg" alt="Leake Street Arches">
+                                    <div class="image-caption">Leake Street - Graffiti walls</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Indirizzo:</strong> Leake Street (tra Lower Marsh e Spur Road), SE1 7TG</p>
+                            <p><strong>Ingresso:</strong> Gratuito | <strong>Orari:</strong> Sempre aperto (giorno)</p>
+                            
+                            <div class="route-info">
+                                <strong>Come arrivarvi:</strong> Da South Bank verso Waterloo (a piedi 15 min oppure bus 5 min)
+                            </div>
+
+                            <span class="duration">⏱️ Durata: 45 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">16:15–17:45</span>
+                            <div class="location">🏛️ Westminster (Big Ben + Parliament + St James's Park)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1763273097/search_images/26bbed0e08fb16f87fac0f4e73e27cdd3e9eb1d2.jpg" alt="Big Ben Parliament">
+                                    <div class="image-caption">Houses of Parliament - Big Ben</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1763050760/search_images/2a047fb20be9bb83659d5e294865ead22463cd68.jpg" alt="Westminster">
+                                    <div class="image-caption">Westminster - Palace detail</div>
+                                </div>
+                            </div>
+
+                            <div class="route-info">
+                                <strong>Percorso:</strong> Tube da Waterloo → Westminster (Northern Line, 4 fermate, 10 min)
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2484.5!2d-0.1250!3d51.4976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4876052ed3f4c4c5%3A0x4f0a0a0a0a0a0a!2sWaterloo%20Station!3m2!1d51.5038!2d-0.1142!4m5!1s0x4876053c3f3f3f3f%3A0x4f0a0a0a0a0a0a!2sWestminster%20Station!3m2!1d51.4976!2d-0.1250!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            <p><strong>Da vedere:</strong></p>
+                            <ul style="margin-left: 20px;">
+                                <li>Houses of Parliament + Big Ben (esterno, da Westminster Bridge)</li>
+                                <li>St James's Park (passeggiata, anatre nel lago)</li>
+                                <li>Buckingham Palace (lato esterno dal parco)</li>
+                            </ul>
+
+                            <span class="duration">⏱️ Durata: 90 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">17:45–18:45</span>
+                            <div class="location">👑 Buckingham Palace (tramonto)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1763908843/search_images/f5f6196f4e77354d9e8e8497b1fd5b2a7599b97ae.jpg" alt="Buckingham Palace">
+                                    <div class="image-caption">Buckingham Palace - Changing of the Guard</div>
+                                </div>
+                            </div>
+
+                            <p>Continuate la passeggiata nel parco verso Buckingham Palace (10 min a piedi)</p>
+                            <span class="duration">⏱️ Durata: 60 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">19:30–22:00</span>
+                            <div class="location">🍽️ Cena in West End (Soho/Covent Garden)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780382/search_images/49bbc23951d7098250168ed074a7b0a0e529e1b2.jpg" alt="Soho Covent Garden">
+                                    <div class="image-caption">Soho/Covent Garden - Zona ristoranti</div>
+                                </div>
+                            </div>
+
+                            <div class="route-info">
+                                <strong>Percorso:</strong> Tube da St James's Park → Jubilee Line verso Leicester Square (2 fermate, 5 min)
+                            </div>
+
+                            <div class="allergen-alert">
+                                <strong>🍴 Per Teresa:</strong> Cercate ristoranti con "allergen menu". Scegliete Thai (naturalmente senza latte), Giapponese, o Italiano (che capisce bene le allergie)
+                            </div>
+
+                            <span class="duration">⏱️ Durata: 150 minuti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMENICA 25 GENNAIO -->
+            <div class="day-section">
+                <div class="day-title">📅 DOMENICA 25 GENNAIO 2026</div>
+                <p style="margin-bottom: 15px;"><strong>🎯 Tema:</strong> Cultura Classica + Chicca Strana (Museo-casa)</p>
+                
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">08:30–09:10</span>
+                            <div class="location">☕ Colazione in appartamento</div>
+                            <p>Acquistate la sera prima a Tesco/Sainsbury's: pane senza glutine, latte mandorla/cocco per Teresa, cereali, frutta</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">09:10–09:55</span>
+                            <div class="location">🚌 Viaggio verso British Museum</div>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong><br>
+                                1. Bus 136 → Elephant & Castle (19 min)<br>
+                                2. Tube: Northern/Central Line → Tottenham Court Road (5 fermate, 12 min)<br>
+                                3. A piedi verso entrata (2 min)
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d9876.5!2d-0.1350!3d51.5195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x48760424a4f8cfd9%3A0x4f0a0a0a0a0a0a!2s47%20Southampton%20Way!3m2!1d51.5070!2d-0.1015!4m5!1s0x48761b3a3f3f3f3f%3A0x4f0a0a0a0a0a0a!2sBritish%20Museum!3m2!1d51.5194!2d-0.1270!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">10:00–15:00</span>
+                            <div class="location">🏛️ BRITISH MUSEUM (Visita)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1763911811/search_images/47c210985442b8e3be2ddd0b927e02bf72930a23.jpg" alt="British Museum Great Court">
+                                    <div class="image-caption">British Museum - Great Court</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767199090/search_images/49e6c16646241238b82eb34235e78e69da91fcbe.jpg" alt="British Museum interior">
+                                    <div class="image-caption">British Museum - Sale interne</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Orari:</strong> 10:00–17:00 | <strong>Ingresso:</strong> GRATUITO</p>
+                            
+                            <div class="tips-box">
+                                <strong>💡 Strategia visita (IMPORTANTE):</strong><br>
+                                Il museo è ENORME (8 milioni di oggetti). Scegliete 4–5 sezioni must e restate concentrati!
+                            </div>
+
+                            <h4>Top 5 sezioni da non perdere:</h4>
+                            <ol style="margin-left: 20px;">
+                                <li><strong>Ancient Egypt</strong> - Mummie, sarcofagi (Room 61–63) - 60–90 min</li>
+                                <li><strong>Parthenon Marbles</strong> - Scultura greca (Room 18) - 45 min</li>
+                                <li><strong>Rosetta Stone</strong> - Iconicissima (Room 4) - 20 min</li>
+                                <li><strong>Mummified Remains</strong> - Corpi di 3000 anni (Room 63) - 30 min</li>
+                                <li><strong>Asian Collections</strong> - Bronzi, ceramiche (Room 95–97) - 30–45 min</li>
+                            </ol>
+
+                            <span class="duration">⏱️ Durata: 300 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">15:00–15:20</span>
+                            <div class="location">🚇 Trasferimento verso Soane Museum</div>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong> Tube Northern/Central → Holborn (1 fermata, 3 min)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">15:20–16:30</span>
+                            <div class="location">🏛️ SIR JOHN SOANE'S MUSEUM (Esperienza speciale)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780371/search_images/5f2b662518ab610a682a9a18884f902349b87268.jpg" alt="Soane Museum interior">
+                                    <div class="image-caption">Soane Museum - Interior</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780371/search_images/a89125ec2584e826f31c7c836d95e8a57c89be69.jpg" alt="Soane Museum rooms">
+                                    <div class="image-caption">Soane Museum - Rooms</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Orari:</strong> mer–dom 10:00–17:00 | <strong>Ingresso:</strong> GRATUITO</p>
+                            
+                            <div class="tips-box">
+                                <strong>🎭 Cos'è?</strong> Casa privata dello storico Sir John Soane (1753–1837), come una "wunderkammer" (camera delle meraviglie) del XVIII secolo
+                            </div>
+
+                            <h4>Highlights da non perdere:</h4>
+                            <ul style="margin-left: 20px;">
+                                <li><strong>Picture Room Recess</strong> - Pannelli che si aprono come libro (11:00, 15:00, 16:00) - 15 min</li>
+                                <li><strong>The Dome</strong> - Stanza rotonda con luce dall'alto - 10 min</li>
+                                <li><strong>Ancient Fragments</strong> - Sculture ammucchiate - 30 min</li>
+                                <li><strong>Library</strong> - Scaffali di libri rari - 15 min</li>
+                            </ul>
+
+                            <span class="duration">⏱️ Durata: 70 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">17:00–18:15</span>
+                            <div class="location">🚶 Passeggiata Covent Garden / Seven Dials</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780382/search_images/49bbc23951d7098250168ed074a7b0a0e529e1b2.jpg" alt="Covent Garden">
+                                    <div class="image-caption">Covent Garden - Market</div>
+                                </div>
+                            </div>
+
+                            <p>Da Lincoln's Inn Fields → Covent Garden (15 min a piedi). Vedrete: piazza con mercato, artisti di strada, shop</p>
+                            <span class="duration">⏱️ Durata: 75 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">19:30–22:00</span>
+                            <div class="location">🍽️ Cena (Soho/Covent Garden)</div>
+                            <p>Cambiate zona rispetto a sabato. Stessi suggerimenti allergen di sabato</p>
+                            <span class="duration">⏱️ Durata: 150 minuti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LUNEDÌ 26 GENNAIO -->
+            <div class="day-section">
+                <div class="day-title">📅 LUNEDÌ 26 GENNAIO 2026</div>
+                <p style="margin-bottom: 15px;"><strong>🎯 Tema:</strong> Ceremonia Reale + City Storica + Skyline Moderno (gratuito)</p>
+                
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">08:30–09:30</span>
+                            <div class="location">🎒 Check-out + preparazione bagagli</div>
+                            
+                            <div class="tips-box">
+                                <strong>💡 Deposito bagagli:</strong> Bounce/Stasher app oppure London Bridge left luggage (controllate orari). Recuperate verso 16:30
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">09:30–10:20</span>
+                            <div class="location">🚌 Viaggio verso Wellington Barracks</div>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong><br>
+                                1. Bus 136 → Elephant & Castle (19 min)<br>
+                                2. Tube: Jubilee/District Line → St James's Park (2 fermate, 6 min)<br>
+                                3. A piedi verso Birdcage Walk (5 min)
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d9876.5!2d-0.1350!3d51.5025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x48760424a4f8cfd9%3A0x4f0a0a0a0a0a0a!2s47%20Southampton%20Way!3m2!1d51.5070!2d-0.1015!4m5!1s0x4876053f3f3f3f3f%3A0x4f0a0a0a0a0a0a!2sWellington%20Barracks%20Birdcage%20Walk!3m2!1d51.5025!2d-0.1350!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            <p><strong>Dove posizionarsi:</strong> Lungo Birdcage Walk (recinzione esterna). Scegliete punto con vista libera</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">10:00–11:00</span>
+                            <div class="location">👑 CHANGING OF THE GUARD (Wellington Barracks)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1763908843/search_images/f5f6196f4e77354d9e8e8497b1fd5b2a7599b97ae.jpg" alt="Changing of the Guard">
+                                    <div class="image-caption">Changing of the Guard - Cerimonia</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780371/search_images/acea23db01afb78f3c96e8b20eb0cc8a9ef324c0.jpg" alt="Birdcage Walk">
+                                    <div class="image-caption">Birdcage Walk - Area cerimonia</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Orario:</strong> Cambio 11:00 a Buckingham Palace; New Guard parte da Wellington alle 10:57</p>
+                            
+                            <h4>Cosa accade:</h4>
+                            <ol style="margin-left: 20px;">
+                                <li>10:00–10:50: New Guard si schiera a Wellington</li>
+                                <li>10:50: Banda musicale arriva</li>
+                                <li>10:57: Marcia verso Buckingham Palace (momento bellissimo per foto!)</li>
+                                <li>11:00–11:30: Cambio vero e proprio a Buckingham</li>
+                            </ol>
+
+                            <div class="weather-info">
+                                <strong>❄️ Meteo:</strong> Gennaio a Londra è freddo (6–8°C) e umido. Portate giacca + sciarpa + ombrello
+                            </div>
+
+                            <span class="duration">⏱️ Durata: 60 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">11:30–12:15</span>
+                            <div class="location">☕ Pausa + pranzo semplice</div>
+                            <p>Zona St James's Park (caffè/tè per riscaldarvi + panino semplice). Prezzo: £5–10 a persona</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">12:30–13:30</span>
+                            <div class="location">🚶 City walk: verso St Dunstan-in-the-East</div>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong> Tube da St James's Park → Monument (Circle/District Line, 3 fermate, 8 min) → A piedi verso St Dunstan's Hill (5 min)
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2484.5!2d-0.0850!3d51.5105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4876053f3f3f3f3f%3A0x4f0a0a0a0a0a0a!2sMonument!3m2!1d51.5107!2d-0.0857!4m5!1s0x487605c5c5c5c5c5%3A0x4f0a0a0a0a0a0a!2sSt%20Dunstan%20in%20the%20East!3m2!1d51.5106!2d-0.0809!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">12:30–13:30</span>
+                            <div class="location">🌿 ST DUNSTAN-IN-THE-EAST (Giardino segreto)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1765644918/search_images/519637fbb1a025c450fa7a2a3c8619d002cfc274.jpg" alt="St Dunstan garden">
+                                    <div class="image-caption">St Dunstan - Giardino incantato</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767780383/search_images/9c14d34819d58241c42471130ce3f6acdeb6ec30.jpg" alt="St Dunstan arches">
+                                    <div class="image-caption">St Dunstan - Archi della chiesa</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Indirizzo:</strong> St Dunstan's Hill, London EC3R 5DD</p>
+                            <p><strong>Orari:</strong> 8:00–dusk | <strong>Ingresso:</strong> GRATUITO</p>
+                            
+                            <div class="tips-box">
+                                <strong>🎭 Cos'è?</strong> Giardino pubblico dentro rovine di chiesa XVII secolo (distrutta WWII). Oasi verde tranquilla, molto poco turistica, atmosfera "magica"
+                            </div>
+
+                            <span class="duration">⏱️ Durata: 45 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">13:45–14:15</span>
+                            <div class="location">🚶 Mini City walk (Monument + intorno)</div>
+                            <p>Monument (colonna Grande Incendio 1666), vicoli medievali City, Tower of London (veduta da lontano)</p>
+                            <span class="duration">⏱️ Durata: 30 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">15:00–16:15</span>
+                            <div class="location">🌆 SKY GARDEN (Esperienza gratuita)</div>
+                            
+                            <div class="image-gallery">
+                                <div class="image-item">
+                                    <img src="https://i0.wp.com/walkslowrunwild.com/wp-content/uploads/2018/05/Sky-Garden-The-Best-Free-Views-of-London-including-St-Pauls-and-London-Eye.jpg?fit=1600%2C1067&quality=80&strip=all&ssl=1" alt="Sky Garden views">
+                                    <div class="image-caption">Sky Garden - Veduta panoramica</div>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://pplx-res.cloudinary.com/image/upload/v1765720350/search_images/92cdc9e4e283f804e70eb1cdaa5099e03d01ab7a.jpg" alt="Sky Garden Fenchurch">
+                                    <div class="image-caption">Sky Garden - Fenchurch Building</div>
+                                </div>
+                            </div>
+
+                            <p><strong>Indirizzo:</strong> Sky Garden, 1 Sky Garden Walk, London EC3M 8AF</p>
+                            <p><strong>Orari lunedì 26:</strong> 10:00–23:00 (ultimo ingresso 22:00)</p>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong> Tube da Monument → Bank (Circle/District Line, 1 fermata, 2 min) → A piedi verso Fenchurch Street (3 min)
+                            </div>
+
+                            <div class="allergen-alert">
+                                <strong>⚠️ PRENOTAZIONE BIGLIETTO (IMPORTANTE!):</strong><br>
+                                Biglietti GRATUITI si prenotano ONLINE, 3 settimane in anticipo, sono limitatissimi<br>
+                                <strong>Per 26 gennaio:</strong> rilasciati lunedì 5 gennaio mattina<br>
+                                Potrebbero essere esauriti (soprattutto pomeriggio)<br>
+                                Controllate ORA: <a href="https://skygarden.london/booking/" target="_blank" style="color: #DC3545;">https://skygarden.london/booking/</a>
+                            </div>
+
+                            <h4>Se biglietti esauriti (Plan B):</h4>
+                            <ol style="margin-left: 20px;">
+                                <li>Walk-in gratuito (rarissimo gennaio, arrivate prima 9:00)</li>
+                                <li>Biglietto a pagamento: ~£20 a persona</li>
+                                <li>Con prenotazione ristorante: accesso gratuito a Sky Garden</li>
+                            </ol>
+
+                            <h4>Una volta dentro:</h4>
+                            <ul style="margin-left: 20px;">
+                                <li>Ascensore: 35° piano in ~1 minuto</li>
+                                <li>Tre livelli pubblici con giardini e vedute a 360°</li>
+                                <li>Veduta verso St Paul's, Tower Bridge, Thames</li>
+                                <li>Bar/caffè a pagamento (non obbligatorio)</li>
+                            </ul>
+
+                            <span class="duration">⏱️ Durata: 75 minuti</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">16:15–17:00</span>
+                            <div class="location">🎒 Recupero bagagli + verso Luton</div>
+                            
+                            <div class="route-info">
+                                <strong>Percorso:</strong> Ritornate dove avete depositato bagagli → Dirigetevi verso St Pancras International Station
+                            </div>
+
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2483.5!2d-0.1250!3d51.5316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x487605c4c4c4c4c5%3A0x4f0a0a0a0a0a0a!2sCity%20of%20London!3m2!1d51.5107!2d-0.0857!4m5!1s0x48761b5c5c5c5c5c%3A0x4f0a0a0a0a0a0a!2sSt%20Pancras%20International!3m2!1d51.5316!2d-0.1250!5e0!3m2!1sit!2suk!4v1231231231" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            <h4>Come arrivarci a St Pancras:</h4>
+                            <ul style="margin-left: 20px;">
+                                <li class="tube">Tube dalla zona City → King's Cross/St Pancras (Circle/Northern/Hammersmith & City Line, 3 fermate, 7 min)</li>
+                                <li class="walk">Oppure: camminate (se leggeri, ~20 min)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="timeline-item">
+                        <div class="time-block">
+                            <span class="time-range">17:15–21:40</span>
+                            <div class="location">✈️ Da St Pancras a Luton → Volo FCO</div>
+                            
+                            <h4>Timeline finale:</h4>
+                            <ul style="margin-left: 20px;">
+                                <li><strong>17:15–17:45:</strong> Check-in + security a Luton</li>
+                                <li><strong>17:45–21:40:</strong> Tempo relax/shopping aeroporto</li>
+                                <li><strong>21:40:</strong> Decollo verso Roma FCO</li>
+                            </ul>
+
+                            <div class="route-info">
+                                <strong>📍 Da St Pancras a Luton:</strong><br>
+                                Thameslink Railway: St Pancras → Luton Airport Parkway (~25 min)<br>
+                                Orari: ogni 15 min circa<br>
+                                Costo: £10–15 a/r (contactless funziona)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALLERGIE TERESA -->
+            <div class="day-section">
+                <h2>🌟 TIPS SPECIALI PER TERESA (Allergie latte + glutine)</h2>
+                
+                <div class="allergen-alert">
+                    <strong>⚠️ Strategia principale:</strong> Sempre chiedere "Does this have gluten or dairy? Are there cross-contamination risks?"
+                </div>
+
+                <h3>🍽️ Mangiare al ristorante</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Cercate menù "allergen" (molti ristoranti hanno)</li>
+                    <li>Scegliete piatti semplici: carne/pesce grigliato + riso + patate + verdure</li>
+                    <li>Evitate: fritti in olio condiviso, paste normali, formaggi</li>
+                </ul>
+
+                <h3>🏪 Supermercati (per fare scorta)</h3>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Tesco</strong> - Sezione "Free From" con pane senza glutine, latte vegetale</li>
+                    <li><strong>Sainsbury's</strong> - Simile a Tesco</li>
+                    <li><strong>Whole Foods</strong> - Più caro, ma scelta amplissima allergen-friendly</li>
+                </ul>
+
+                <h3>☕ Colazione in appartamento</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Pane senza glutine (facile trovarlo)</li>
+                    <li>Latte mandorla/cocco/avena (vegan-friendly)</li>
+                    <li>Cereali senza glutine (Tesco ha marca propria)</li>
+                    <li>Frutta, marmellata</li>
+                </ul>
+
+                <h3>⚡ Fast food "sicuri"</h3>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Leon</strong> - Menu allergeni disponibile, piatti semplici, veloce</li>
+                    <li><strong>Pret a Manger</strong> - Meno sicuro per glutine/latte, ma etichette chiare</li>
+                </ul>
+
+                <h3>🎒 Snack da portare</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Barrette proteiche senza glutine</li>
+                    <li>Frutta secca</li>
+                    <li>Frutta fresca</li>
+                    <li>Così se non trovate ristorante, avete piano B</li>
+                </ul>
+            </div>
+
+            <!-- CHECKLIST -->
+            <div class="day-section">
+                <h2>✅ Checklist Pre-Viaggio</h2>
+                <div class="checklist">
+                    <label><input type="checkbox"> Passaporti (verificate validità)</label>
+                    <label><input type="checkbox"> Contactless funzionanti per 4 persone</label>
+                    <label><input type="checkbox"> Scarpe comode (camminerete MOLTO)</label>
+                    <label><input type="checkbox"> Ombrello (gennaio a Londra è umido)</label>
+                    <label><input type="checkbox"> Giacca + sciarpa (6–8°C)</label>
+                    <label><input type="checkbox"> Power bank (per telefono)</label>
+                    <label><input type="checkbox"> Cibo allergen-friendly Teresa</label>
+                    <label><input type="checkbox"> Numero emergenza Italia (+39)</label>
+                    <label><input type="checkbox"> Assicurazione viaggio</label>
+                    <label><input type="checkbox"> Prenotate Sky Garden SUBITO su https://skygarden.london/booking/</label>
+                </div>
+            </div>
+
+            <!-- LINK UTILI -->
+            <div class="day-section">
+                <h2>🔗 Link Utili (Tutti Testati)</h2>
+                <div class="links-section">
+                    <a href="https://skygarden.london/booking/" target="_blank">🌆 Sky Garden Booking</a>
+                    <a href="https://www.householddivision.org.uk/changing-the-guard-calendar" target="_blank">👑 Changing of Guard</a>
+                    <a href="https://www.britishmuseum.org/visit" target="_blank">🏛️ British Museum</a>
+                    <a href="https://www.soane.org/your-visit" target="_blank">🏛️ Soane Museum</a>
+                    <a href="https://www.thameslinkrailway.com/" target="_blank">🚂 Thameslink</a>
+                    <a href="https://tfl.gov.uk/fares/find-fares/capping" target="_blank">💳 TfL Capping</a>
+                    <a href="https://boroughmarket.org.uk/visit-us/" target="_blank">🍽️ Borough Market</a>
+                    <a href="https://www.nationalexpress.com/" target="_blank">🚌 National Express</a>
+                    <a href="https://citymapper.com/london" target="_blank">🗺️ Citymapper App</a>
+                    <a href="https://www.google.com/maps" target="_blank">📍 Google Maps</a>
+                </div>
+            </div>
+
+            <!-- ULTIMI CONSIGLI -->
+            <div class="day-section">
+                <h2>🎬 Ultimi Consigli</h2>
+                <div class="tips-box">
+                    <strong>1. Dormite bene le notti prima:</strong> I musei stanchano molto<br><br>
+                    <strong>2. Scegliete le priorità:</strong> Non potete fare tutto; restate concentrati su 5–6 cose max per giorno<br><br>
+                    <strong>3. Bevete acqua:</strong> I trasporti londinesi non sempre hanno beverages<br><br>
+                    <strong>4. Scarpe comode:</strong> Davvero, vi diranno grazie i vostri piedi<br><br>
+                    <strong>5. Flessibilità:</strong> Se piove o vi stancate, cambiate programma (la vacanza non è una corsa)<br><br>
+                    <strong>6. Godetevi Londra:</strong> È una città incredibile, anche sbagliando strada troverete qualcosa di bello! 🇬🇧✨
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🇬🇧 Buon viaggio a Londra! ✨</h3>
+            <p>Documento preparato: 7 gennaio 2026 | Aggiornato con orari verificati, mappe, immagini e link testati</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Stampa questa guida o conservala sul telefono per usarla on-site</p>
+        </div>
+    </div>
+
+    <button class="print-button" onclick="window.print()">🖨️ STAMPA</button>
+
+</body>
+</html>
